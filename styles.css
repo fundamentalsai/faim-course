@@ -157,4 +157,8 @@ section {
 footer {
   margin-top: 30px;
 }
+.team-card img:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
 
