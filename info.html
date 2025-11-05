@@ -6,15 +6,12 @@
   <title>Course Info / Apply / FAQs — FAIM</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .top-logos{ text-align:center; margin:25px 0 10px }
-    .top-logos img{ height:90px; max-width:100%; margin:10px 20px; border-radius:8px }
-
-    /* simple tabs */
-    .tabs{ display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 }
-    .tab-btn{ border:1px solid #26304f; background:var(--card); color:var(--text); padding:8px 12px; border-radius:10px; cursor:pointer }
-    .tab-btn.active{ background:linear-gradient(90deg,var(--brand),var(--brand2)); color:#000; font-weight:700 }
-    .tab-panel{ display:none }
-    .tab-panel.active{ display:block }
+    /* tiny tab JS uses these classes */
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+    .tab-btn{border:1px solid var(--border);background:var(--card);color:var(--text);padding:8px 12px;border-radius:10px;cursor:pointer}
+    .tab-btn.active{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#000;font-weight:700}
+    .tab-panel{display:none}
+    .tab-panel.active{display:block}
   </style>
 </head>
 <body>
@@ -45,53 +42,46 @@
         <button class="tab-btn" data-tab="faqs">FAQs</button>
       </div>
 
-      <!-- Full course information -->
       <div class="tab-panel active" id="info">
         <h2>Overview</h2>
-        <p>Brief description of the course format, learning outcomes, prerequisites, and assessment. Replace this placeholder with your official copy.</p>
+        <p>Replace this with your official course copy: outcomes, prerequisites, delivery, assessment, and support.</p>
         <ul>
-          <li>4 modules covering ANN, optimizers/encoders, regression/time series/CNN, and text/LLMs/RAG</li>
+          <li>4 modules: ANN, optimizers/encoders, regression/time series/CNN, text/LLMs/RAG</li>
           <li>Videos + practice notebooks</li>
           <li>Optional mini-project with industry data</li>
         </ul>
         <h3>Schedule & delivery</h3>
-        <p>Self-paced online. Add any cohort or live-support details here.</p>
+        <p>Self-paced online. Add any live sessions or cohort info here.</p>
       </div>
 
-      <!-- How to apply -->
       <div class="tab-panel" id="apply">
         <h2>How to apply</h2>
         <ol>
-          <li>Register interest (link or email)</li>
-          <li>Complete the application form (link)</li>
-          <li>Confirmation and next steps</li>
+          <li>Register interest (link)</li>
+          <li>Submit application (link)</li>
+          <li>Confirmation & next steps</li>
         </ol>
         <p><strong>Contact:</strong> <a href="mailto:abhilash.p-m@strath.ac.uk">abhilash.p-m@strath.ac.uk</a></p>
       </div>
 
-      <!-- FAQs -->
       <div class="tab-panel" id="faqs">
         <h2>FAQs</h2>
-        <p><strong>Q:</strong> Do I need prior coding experience?<br>
-           <strong>A:</strong> Helpful but not required. We provide starter notebooks.</p>
-        <p><strong>Q:</strong> Is there a certificate?<br>
-           <strong>A:</strong> Add your policy here (e.g., upon completion of mini-project).</p>
-        <p><strong>Q:</strong> Is the course free?<br>
-           <strong>A:</strong> Add fee/waiver details here.</p>
+        <p><strong>Do I need coding experience?</strong> Helpful but not required.</p>
+        <p><strong>Is there a certificate?</strong> Add policy here.</p>
+        <p><strong>What’s the cost?</strong> Add fee/waiver details here.</p>
       </div>
     </div>
 
     <footer>
-      <div><a href="./">Back to Home</a></div>
+      <a href="./">Back to Home</a>
     </footer>
   </div>
 
   <script>
-    // tiny tab switcher
-    const buttons = document.querySelectorAll('.tab-btn');
-    const panels = document.querySelectorAll('.tab-panel');
+    const buttons=document.querySelectorAll('.tab-btn');
+    const panels=document.querySelectorAll('.tab-panel');
     buttons.forEach(btn=>{
-      btn.addEventListener('click', ()=>{
+      btn.addEventListener('click',()=>{
         buttons.forEach(b=>b.classList.remove('active'));
         panels.forEach(p=>p.classList.remove('active'));
         btn.classList.add('active');
