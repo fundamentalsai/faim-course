@@ -15,6 +15,7 @@
       <img src="assets/Colab.png" alt="Colab Logo">
     </div>
 
+    <!-- Top nav -->
     <nav class="nav">
       <a class="logo" href="./">FAIM — Fundamentals of AI for Manufacturing</a>
       <div class="links">
@@ -27,45 +28,50 @@
       </div>
     </nav>
 
-    <section class="hero">
-      <div>
+    <!-- Centered hero -->
+    <section class="hero centered">
+      <div class="hero-content">
         <span class="badge">Open & self-paced</span>
         <h1>Fundamentals of AI for Manufacturing</h1>
-        <p>Discover how AI transforms manufacturing. Learn core models, see practical applications, and practice with guided examples.</p>
+        <p>This course introduces the core ideas behind modern AI and shows how they apply to manufacturing.
+        It blends short theory segments with hands-on walkthroughs.</p>
         <a class="btn" href="#modules">Start learning</a>
-      </div>
-
-      <div class="info-card">
-        <h2>At a Glance</h2>
-        <div class="summary-icons">
-          <div class="summary-item"><span>1</span> Four interactive modules</div>
-          <div class="summary-item"><span>2</span> Hybrid learning (videos + exercises)</div>
-          <div class="summary-item"><span>3</span> Industry mini-project</div>
-          <div class="summary-item"><span>4</span> No prior AI experience needed</div>
-        </div>
       </div>
     </section>
 
-    <section class="grid cols-2" style="margin-top:24px">
+    <!-- Three centered cards -->
+    <section class="three-cards">
       <div class="card">
-        <h2>What you’ll learn</h2>
+        <h2>At a glance</h2>
         <ul>
-          <li>Neural networks & fitting process</li>
-          <li>Optimizers, encoders & tokenization</li>
-          <li>Regression, time series & CNNs</li>
-          <li>Text, LLMs & RAG</li>
+          <li>4 modules</li>
+          <li>Hybrid friendly — online videos + self practice</li>
+          <li>Final mini-project using an industry dataset</li>
+          <li>Prereqs: basic Python (helpful, not required)</li>
         </ul>
       </div>
+
+      <div class="card">
+        <h2>What you'll learn</h2>
+        <ul>
+          <li>ANN architecture, loss functions, normalization</li>
+          <li>Optimizers, encoders, tokenization principles</li>
+          <li>Regression, time series (RNN/LSTM), image basics (CNN)</li>
+          <li>Working with text, basics of LLMs, intro to RAG</li>
+        </ul>
+      </div>
+
       <div class="card">
         <h2>How it works</h2>
         <ul>
-          <li>Watch short lectures</li>
-          <li>Practice with notebooks</li>
-          <li>Apply skills in a mini-project</li>
+          <li>Watch the lecture videos for each module</li>
+          <li>Use the linked notebooks/slides to practice</li>
+          <li>Optionally complete a small final project</li>
         </ul>
       </div>
     </section>
 
+    <!-- Modules -->
     <section id="modules" style="margin-top:24px">
       <h2>Modules</h2>
       <div class="grid cols-2">
@@ -86,16 +92,19 @@
         </div>
         <div class="card module-card">
           <h3>Module 4 — Text & LLMs</h3>
-          <p>Text processing, LLMs, introduction to RAG.</p>
+          <p>Working with text, basics of LLMs, introduction to RAG.</p>
           <a class="btn" href="module4.html">Open Module 4</a>
         </div>
       </div>
     </section>
 
-    <!-- App link (no tagline) -->
-    <section class="app-section">
-      <a href="https://huggingface.co/spaces/Abhi-pm-0202/ml-app-launcher-v3" target="_blank">Visit the AI Tool</a>
-      <div class="small-muted" style="margin-top:10px;">Developed by NMIS AI-team</div>
+    <!-- Colored tab for AI tool -->
+    <section class="app-highlight">
+      <div class="app-content">
+        <h2>Visit the AI Tool</h2>
+        <a href="https://huggingface.co/spaces/Abhi-pm-0202/ml-app-launcher-v3" target="_blank" class="btn-dark">Open the App</a>
+        <p class="small-muted">Developed by NMIS AI-team</p>
+      </div>
     </section>
 
     <!-- Support -->
@@ -106,9 +115,11 @@
       </div>
     </section>
 
+    <!-- Footer -->
     <footer>
       © 2025 National Manufacturing Institute Scotland — Fundamentals of AI for Manufacturing. Built by the FAIM team and hosted on GitHub Pages.
     </footer>
+
   </div>
 </body>
 </html>
