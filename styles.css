@@ -162,3 +162,15 @@ footer {
   transition: transform 0.3s ease;
 }
 
+/* --- Center align modules when last item is alone --- */
+#modules .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+#modules .card {
+  width: 280px;
+  text-align: left;
+}
